@@ -3,7 +3,7 @@ import './AddTask.css';
 
 
 export default class AddTask extends React.Component{
-
+    
     handleClick(){
         const btn = document.querySelector('.btn-add');
         const text = document.querySelector('.task-placeholder');
@@ -93,20 +93,23 @@ export default class AddTask extends React.Component{
                 <div className="group-task">
 
                     <div>
-                        <label htmlFor="category">Category:</label>
+                        <label htmlFor="category"></label>
                         <select name="category" id="task-category">
-                                <option value="a"> a</option>
-                            <option value="b">b</option>
-                            <option value="c">c</option>
+                            <option value="work">work</option>
+                            <option value="study">study</option>
+                            <option value="sport">sport</option>
+                            <option value="food">food</option>
+                            <option value="misc">misc</option>
+
                         </select>
                     </div>
                     
                     <div id='rating'>
-                        <i class="fa fa-thermometer-empty fa-2x" id='rating-one' aria-hidden="true"></i>
-                        <i class="fa fa-thermometer-quarter fa-2x" id='rating-two'  aria-hidden="true"></i>
-                        <i class="fa fa-thermometer-half fa-2x" id='rating-three'  aria-hidden="true"></i> 
-                        <i class="fa fa-thermometer-three-quarters fa-2x" id='rating-four'  aria-hidden="true"></i>
-                        <i class="fa fa-thermometer-full fa-2x" id='rating-five'  aria-hidden="true"></i> 
+                        <i className="fa fa-thermometer-empty fa-2x" id='rating-one' aria-hidden="true"></i>
+                        <i className="fa fa-thermometer-quarter fa-2x" id='rating-two'  aria-hidden="true"></i>
+                        <i className="fa fa-thermometer-half fa-2x" id='rating-three'  aria-hidden="true"></i> 
+                        <i className="fa fa-thermometer-three-quarters fa-2x" id='rating-four'  aria-hidden="true"></i>
+                        <i className="fa fa-thermometer-full fa-2x" id='rating-five'  aria-hidden="true"></i> 
                     </div>
                     {this.handleRating()}
                     <div>
